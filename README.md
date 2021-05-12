@@ -12,10 +12,8 @@ services:
       - "6080:6080"
     volumes:
       - <path to config folder>:/config
-    cap_add:
-      - NET_ADMIN
     restart: unless-stopped
 ```
 The website will be available at `localhost:6080`.
 
-In your config folder you can put a `init.sh` to setup, for example, a VPN access to your school.
+In your config folder you can put a `init.sh` to setup, for example, a VPN access to your school (you might add `cap_add: - NET_ADMIN` in your compose file for that).
